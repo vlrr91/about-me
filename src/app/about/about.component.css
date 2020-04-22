@@ -24,6 +24,9 @@
   font-size: 1.7rem;
   color: #2196F3;
 }
+.social-logo:hover {
+  color: #1976D2;
+}
 .social-link:first-child {
   margin-right: .7rem;
 }
