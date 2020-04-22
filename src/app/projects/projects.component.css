@@ -1,0 +1,64 @@
+.projects-content {
+  padding-top: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.projects-list {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  grid-gap: 10px;
+}
+.projects-item {
+  background-image: url("https://ximg.es/250.png/09f/fff");
+  width: 250px;
+  height: 250px;
+  position: relative;
+}
+.projects-item:nth-child(3) {
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+.projects-item:nth-child(4) {
+  grid-column-start: 3;
+  grid-row-start: 2;
+}
+.project-info {
+  background-color: #FFFFFF;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+.project-info h4,
+.project-info p {
+  margin: 0;
+}
+.projects-github-title {
+  font-weight: 400;
+  font-family: 'Pacifico', cursive;
+  font-size: 1.5rem;
+}
+.projects-github-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 10px;
+}
+.projects-github-item {
+  border: 1px solid;
+  padding: .5rem;
+  text-align: center;
+}
+.projects-github-item h4,
+.projects-github-item p {
+  margin: 0;
+}
+

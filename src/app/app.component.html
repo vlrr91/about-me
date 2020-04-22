@@ -1,34 +1,20 @@
 <div class="app-container">
-  <div class="app-content">
-    <div class="app-info">
-      <div class="info-avatar">
-        <img src="/assets/images/avatar.png"
-             width="100px"
-             alt=""
-             title="Victor Roa">
-        <h1>Victor Roa</h1>
-        <div class="info-social">
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-            <ion-icon name="logo-twitter"></ion-icon>
-          </a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-            <ion-icon name="logo-github"></ion-icon>
-          </a>
-        </div>
-      </div>
-    </div>
+  <div class="app-navigation">
+    <ul class="app-menu">
+      <li class="menu-item">
+        <a [routerLink]="['/about']"
+           routerLinkActive="active"
+           class="menu-link">Acerca</a>
+      </li>
+      <li class="menu-item">
+        <a [routerLink]="['/projects']"
+           routerLinkActive="active"
+           class="menu-link">Proyectos</a>
+      </li>
+    </ul>
+  </div>
 
-    <router-outlet></router-outlet>
-
-    <div class="app-navigation">
-      <ul class="app-menu">
-        <li class="menu-item">
-          <a [routerLink]="['/about']" class="menu-link">Acerca</a>
-        </li>
-        <li class="menu-item">
-          <a [routerLink]="['/projects']" class="menu-link">Proyectos</a>
-        </li>
-      </ul>
-    </div>
+  <div [@slideInAnimation]="o.isActivated ? o.activatedRoute: ''">
+    <router-outlet #o=outlet></router-outlet>
   </div>
 </div>

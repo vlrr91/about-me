@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { RouterModule } from "@angular/router";
 import { CommonModule } from '@angular/common';
 import { ProjectsComponent } from './projects.component';
@@ -15,6 +15,9 @@ import { ProjectsComponent } from './projects.component';
         component: ProjectsComponent
       }
     ])
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
   ]
 })
 export class ProjectsModule { }

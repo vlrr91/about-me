@@ -1,0 +1,28 @@
+.app-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-bottom: 1px solid #dddddd;
+  background-color: #FFFFFF;
+  padding: .5rem;
+}
+.menu-link {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  font-weight: 500;
+  padding: .5rem 0;
+  text-transform: uppercase;
+  color: #757575;
+  letter-spacing: 1px;
+  margin: 0 .5rem;
+}
+.project-info {
+  background-color: #FFFFFF;
+}
+.active {
+  color: #2196F3;
+  border-bottom: 2px solid #2196F3;
+}
