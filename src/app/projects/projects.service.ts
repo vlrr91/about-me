@@ -1,9 +1,9 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import {Observable, throwError} from "rxjs";
-import {catchError, map} from "rxjs/operators";
+import { Observable, throwError } from "rxjs";
+import {catchError, map, tap, filter } from "rxjs/operators";
 
-import {ProjectGithub} from "./project";
+import { ProjectGithub } from "./project";
 
 @Injectable({
   providedIn: "root"
@@ -15,11 +15,16 @@ export class ProjectsService {
 
   getAllGithubProjects(): Observable<ProjectGithub[]> {
     return this.http.get<ProjectGithub[]>(this.url).pipe(
-      map(data => data.map(project => ({
-        name: project.name,
-        html_url: project.html_url,
-        description: project.description
-      }))),
+      map(data => data.filter(project => {
+        if (project.fork === false) {
+          return {
+            name: project.name,
+            html_url: project.html_url,
+            description: project.description,
+            fork: false
+          }
+        }
+      })),
       catchError(ProjectsService.handleError)
     );
   }
