@@ -1,6 +1,8 @@
-export interface ProjectGithub {
+export interface Project {
   name: string,
-  html_url: string;
-  description?: string;
-  fork: boolean;
+  webUrl: string;
+  description: string;
+  image: string;
+  githubUrl: string;
+  technologies: string[];
 }
