@@ -4,25 +4,30 @@
          *ngFor="let project of projects">
       <div class="card__image">
         <img [src]="project.image" [alt]="project.name">
-      </div>
-      <div class="card__links">
-        <a class="card__link"
-           [href]="project.webUrl"
-           target="_blank"
-           rel="noopener noreferrer">
-          <ion-icon class="card__icon" name="link-outline"></ion-icon>
-          web
-        </a>
-        <a class="card__link"
-           [href]="project.githubUrl"
-           target="_blank"
-           rel="noopener noreferrer">
-          <ion-icon class="card__icon" name="logo-github"></ion-icon>
-          github
-        </a>
+        <div class="card__links">
+          <a class="card__link"
+             [href]="project.webUrl"
+             target="_blank"
+             rel="noopener noreferrer">
+            <ion-icon class="card__icon" name="link-outline"></ion-icon>
+            web
+          </a>
+          <a class="card__link"
+             [href]="project.githubUrl"
+             target="_blank"
+             rel="noopener noreferrer">
+            <ion-icon class="card__icon" name="logo-github"></ion-icon>
+            github
+          </a>
+        </div>
       </div>
       <h2 class="card__title">{{project.name}}</h2>
       <p class="card__desc">{{project.description}}</p>
+      <p *ngIf="project.extraInfo" class="card__extra-info">
+        <a [href]="project.extraInfo.link" target="_blank" rel="noopener noreferrer">
+          {{project.extraInfo.text}}
+        </a>
+      </p>
       <ul class="card__list">
         <li *ngFor="let tech of project.technologies">
           {{tech}}
