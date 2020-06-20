@@ -1,68 +1,119 @@
-.about-content {
+.about {
+  min-height: calc(100vh - 56px);
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding-top: 2rem;
-  max-width: 800px;
+}
+.about__grid  {
+  display: grid;
+  max-width: 700px;
+  grid-template-columns: auto auto;
+  align-items: center;
+}
+.about__grid > div:nth-child(2) {
+  margin-left: 2em;
+  padding: 1em 1.5em;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  border-radius: 8px;
+}
+.about__grid > div:nth-child(2):hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.about__desc p {
+  margin: 0;
+  line-height: 1.8;
+  user-select: none;
+}
+.about__image {
+  position: relative;
+}
+.about__image img,
+.about__info {
+  width: 200px;
+}
+.about__image img {
+  display: block;
   margin: 0 auto;
 }
-.info-avatar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.about__name,
+.about__social {
+  text-align: center;
 }
-.info-title {
-  margin: 1rem 0 0;
+.about__name,
+.social__logo {
+  color: #2196f3;
+}
+.about__name {
   font-family: 'Pacifico', cursive;
   font-weight: 400;
-  letter-spacing: 2px;
-  font-size: 2rem;
-  text-transform: capitalize;
-  color: #2196F3;
+  margin: 0;
+  line-height: 1;
 }
-.social-logo {
-  font-size: 1.7rem;
-  color: #2196F3;
+.about__info {
+  position: absolute;
+  bottom: 0;
 }
-.social-logo:hover {
-  color: #1976D2;
+.social__logo {
+  font-size: 1.8em;
 }
-.social-link:first-child {
-  margin-right: .7rem;
+.about__skills {
+  margin-top: 1em;
 }
-.about-desc {
-  line-height: 1.7rem;
-  letter-spacing: 1px;
-  color: #212121;
-}
-.about-skills {
-  margin-top: 1rem;
-}
-.skill-icon {
+.skill__icon {
   font-size: 2rem;
   margin-right: .3rem;
 }
-.skill-icon.html {
+.skill__icon.html {
   color: #F74A1D;
 }
-.skill-icon.css {
+.skill__icon.css {
   color: #2174F8;
 }
-.skill-icon.js {
+.skill__icon.js {
   color: #F0D91D;
 }
-.skill-icon.angular {
+.skill__icon.angular {
   color: #D70030;
 }
-.skill-icon.ionic {
+.skill__icon.ionic {
   color: #478AFF;
 }
-.skill-icon.firebase {
+.skill__icon.firebase {
   color: #F6A112;
 }
-.skill-icon.node {
+.skill__icon.node {
   color: #7FC728;
 }
-.skill-icon.react {
+.skill__icon.react {
   color: #00D8FF;
+}
+@media screen and (max-width: 768px) {
+  .about {
+    padding: 1em;
+  }
+  .about__grid {
+    grid-template-columns: 1fr;
+    height: auto;
+    max-width: 500px;
+  }
+  .about__image {
+    display: table;
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
+  .about__grid > div:nth-child(2) {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 460px) {
+  .about__image img {
+    width: 150px;
+  }
+  .about__info {
+    position: relative;
+  }
+  .about__name {
+    line-height: 1.5;
+  }
 }

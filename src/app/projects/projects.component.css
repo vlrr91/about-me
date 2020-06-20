@@ -20,7 +20,6 @@
   padding: .7em 0 .5em;
   color: #333131;
   font-size: 1.2em;
-  letter-spacing: 2px;
   font-weight: 500;
   border-bottom: 1px solid #333131;
 }
@@ -85,14 +84,14 @@
 }
 @media screen and (max-width: 768px) {
   .projects__grid {
-    max-width: 550px;
+    padding: 0 2em;
   }
 }
 @media screen and (max-width: 640px) {
   .projects__grid {
     grid-template-columns: 1fr;
+    max-width: 450px;
     width: 100%;
-    max-width: 400px;
     padding: 0 1em;
   }
 }
