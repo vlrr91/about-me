@@ -25,7 +25,7 @@ export class ProjectsService {
     {
       name: 'Spoti App',
       webUrl: 'https://spoti-app.vercel.app//',
-      description: 'Aplicación que vizualiza datos de la API de Spotify, estos junto con el token son traidos por medio de un servicio web construido en Node.js, y alojado en heroku',
+      description: 'Aplicación que vizualiza datos de la API de Spotify, estos junto con el token son obtenidos por medio de un servicio web construido en Node.js, y alojado en heroku',
       technologies: ['Angular', 'Bootstrap'],
       githubUrl: 'https://github.com/vlrr91/about-me',
       image: 'assets/images/p5.jpg',
