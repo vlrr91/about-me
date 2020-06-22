@@ -22,19 +22,28 @@
 }
 .about__desc p {
   margin: 0;
-  line-height: 1.8;
+  line-height: 1.6;
   user-select: none;
+  color: #4d4949;
+  letter-spacing: 1px;
 }
 .about__image {
   position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #a6cff6;
 }
 .about__image img,
 .about__info {
   width: 200px;
 }
+.about__info {
+  margin-top: .5em;
+}
 .about__image img {
   display: block;
   margin: 0 auto;
+  mix-blend-mode: multiply;
 }
 .about__name,
 .about__social {
@@ -50,9 +59,16 @@
   margin: 0;
   line-height: 1;
 }
-.about__info {
-  position: absolute;
-  bottom: 0;
+.about__hello,
+.about__front {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+.about__hello {
+  color: #f97a55
+}
+.about__front {
+  color: #2196f3;
 }
 .social__logo {
   font-size: 1.8em;
@@ -104,6 +120,11 @@
   }
   .about__grid > div:nth-child(2) {
     margin-left: 0;
+  }
+  .about__info {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: .5em;
   }
 }
 @media screen and (max-width: 460px) {
